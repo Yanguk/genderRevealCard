@@ -5,9 +5,10 @@ import bodyCard from "../public/layer-bg.png";
 import headerCard from "../public/1.png";
 import Image from "next/image";
 import { FireworksBackground } from "@/components/FireWorks";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { cn } from "@/lib/utils";
+import { GENDER } from "@/app/constant";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -41,11 +42,6 @@ export default function Home() {
     }
   }, [open]);
 
-  const gender = useMemo(
-    () => (Math.random() * 10 < 5 ? "M" : ("W" as "M" | "W")),
-    [],
-  );
-
   return (
     <div className="relative max-w-4xl h-dvh m-auto flex flex-col justify-center">
       <div
@@ -72,10 +68,10 @@ export default function Home() {
             "absolute w-3/4 h-6/7 rounded-2xl -translate-x-1/2 left-1/2 -translate-y-1/2 -bottom-18 z-20 transition flex flex-col items-center justify-center gap-[3px] shadow p-[3px] text-center",
             !isLoadComplete && "hidden",
             moveCard && "-translate-y-65 duration-800",
-            gender === "W" ? "bg-[#FCD9D9]" : "bg-[#C3DEFC]",
+            GENDER === "W" ? "bg-[#FCD9D9]" : "bg-[#C3DEFC]",
           )}
         >
-          {gender === "W" ? (
+          {GENDER === "W" ? (
             <>
               <h1 className="text-[46px]">👧🏻</h1>
               <h3 className="text-[20px] font-semibold">딸이에요!</h3>

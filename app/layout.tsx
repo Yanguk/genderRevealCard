@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "몰리의 성별은?",
     description: "두근 두근",
     type: "website",
-    url: "https://gender-reveal-card.vercel.app",
+    url: "https://molly.yanguk.com/",
     images: [
       {
         url: "/thumbnail.png",
