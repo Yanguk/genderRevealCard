@@ -1,2 +1,2 @@
 // "M" or "W"
-export const GENDER = "W" as "M" | "W";
+export const GENDER = "M" as "M" | "W";
