@@ -357,7 +357,7 @@ function FireworksBackground({
       <canvas
         {...canvasProps}
         ref={canvasRef}
-        className={cn("absolute inset-0 size-full", canvasProps?.className)}
+        className={cn("z-0 absolute inset-0 size-full", canvasProps?.className)}
       />
     </div>
   );
